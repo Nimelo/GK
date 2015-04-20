@@ -13,6 +13,7 @@ public class Initialization : MonoBehaviour {
 			var cube  = GameObject.CreatePrimitive (PrimitiveType.Cube);
 			cube.transform.position = item + this.transform.position;
 			cube.GetComponent<Renderer>().material.color = this.getRandColor();
+			//cube.AddComponent<Main>();
 		}
 
 
