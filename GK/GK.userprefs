@@ -2,15 +2,8 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Models\EnvironmentModel.cs">
     <Files>
-      <File FileName="Assets\Scripts\Initialization.cs" Line="16" Column="97" />
-      <File FileName="Assets\Scripts\FPSCubeInsertController.cs" Line="32" Column="1" />
-      <File FileName="Assets\Models\EnvironmentModel.cs" Line="67" Column="3" />
-      <File FileName="Assets\Models\Brick.cs" Line="10" Column="8" />
-      <File FileName="Assets\Models\Constants.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\CameraController.cs" Line="17" Column="4" />
-      <File FileName="Assets\Scripts\robimybalwanki.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\UpdateUIScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\PlayerController.cs" Line="24" Column="5" />
+      <File FileName="Assets\Scripts\FPSCubeInsertController.cs" Line="56" Column="1" />
+      <File FileName="Assets\Models\EnvironmentModel.cs" Line="53" Column="38" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -29,6 +22,7 @@
       <Pad Id="MonoDevelop.Debugger.WatchPad">
         <State>
           <Value>this.bricks</Value>
+          <Value>toRemove.Object.transform.localScale</Value>
         </State>
       </Pad>
     </Pads>

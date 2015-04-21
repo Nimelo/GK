@@ -50,15 +50,24 @@ public class EnvironmentModel {
 	public delegate void DestroyGameObjectHandler(GameObject obj);
 	public event DestroyGameObjectHandler DestroyGameObjectEvent;
 
-	public void RemoveBrick(Vector3 pos)
+	public bool RemoveBrick(Vector3 pos)
 	{
 		Brick toRemove = this.bricks.Where (x => x.Position - this.Offset == pos).SingleOrDefault ();
 		if (toRemove != null) {
-			toRemove.Position -= this.Offset;
-			this.bricks.Remove (toRemove);
-
-			DestroyGameObjectEvent(toRemove.Object);
+			if(toRemove.Object.transform.localScale.x > 0.21f)
+			{
+				toRemove.Object.transform.localScale = toRemove.Object.transform.localScale - new Vector3(0.2f, 0.2f, 0.2f);
+				return false;
+			}
+			else
+			{
+				this.bricks.Remove (toRemove);
+				
+				DestroyGameObjectEvent(toRemove.Object);
+				return true;
+			}
 		}
+		return false;
 	}
 
 

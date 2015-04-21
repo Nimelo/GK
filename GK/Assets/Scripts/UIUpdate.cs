@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
-public class UpdateUIScript : MonoBehaviour {
+public class UIUpdate : MonoBehaviour {
 
-	public Canvas c;
-	public UnityEngine.UI.Text text;
+	public Text CreatedBricks;
+	public Text DestroyedBricks;
+	public Text LevelCounter;
+
 	// Use this for initialization
 	void Start () {
 	
