@@ -3,26 +3,17 @@ using System.Collections;
 using UnityEngine.Rendering;
 
 public class Initialization : MonoBehaviour {
-
-	private EnviromentModel Model;
+	
 	// Use this for initialization
 	void Start () {
-		this.Model = new EnviromentModel (10);
-
-		foreach (var item in this.Model.GetCubesPositions()) {
-			var cube  = GameObject.CreatePrimitive (PrimitiveType.Cube);
-			cube.transform.position = item + this.transform.position;
-			cube.GetComponent<Renderer>().material.color = this.getRandColor();
-			//cube.AddComponent<Main>();
-		}
-
-
+		EnvironmentModel.Instance.Offset = this.transform.position;
 
 	}
 	
+
 	// Update is called once per frame
 	void Update () {
-	
+		EnvironmentModel.Instance.DestroyGameObjectEvent += (GameObject obj) => DestroyImmediate(obj);
 	}
 
 	private Color getRandColor(){

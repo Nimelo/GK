@@ -15,7 +15,6 @@ public class CameraController : MonoBehaviour {
 			transform.LookAt(transform);
 			transform.RotateAround(transform.position, Vector3.up, Input.GetAxis("Mouse X")*0.2f);
 		}
-
 	}
 	// Update is called once per frame
 	void LateUpdate () {

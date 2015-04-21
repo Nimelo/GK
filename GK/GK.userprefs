@@ -1,19 +1,37 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\UpdateUIScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Models\EnvironmentModel.cs">
     <Files>
-      <File FileName="Assets\Initialization.cs" Line="16" Column="6" />
-      <File FileName="Assets\Scripts\PlayerController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\CameraController.cs" Line="1" Column="1" />
-      <File FileName="Assets\EnviromentModel.cs" Line="1" Column="1" />
-      <File FileName="Assets\Main.cs" Line="1" Column="1" />
-      <File FileName="Assets\Constants.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\FPSCubeInsterController.cs" Line="1" Column="1" />
-      <File FileName="e:\GitHubRepo\GK\GK\Assets\Standard Assets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs" Line="1" Column="1" />
-      <File FileName="Assets\NewBehaviourScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\robimybalwanki.cs" Line="6" Column="24" />
-      <File FileName="Assets\Scripts\UpdateUIScript.cs" Line="17" Column="2" />
+      <File FileName="Assets\Scripts\Initialization.cs" Line="16" Column="97" />
+      <File FileName="Assets\Scripts\FPSCubeInsertController.cs" Line="32" Column="1" />
+      <File FileName="Assets\Models\EnvironmentModel.cs" Line="67" Column="3" />
+      <File FileName="Assets\Models\Brick.cs" Line="10" Column="8" />
+      <File FileName="Assets\Models\Constants.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\CameraController.cs" Line="17" Column="4" />
+      <File FileName="Assets\Scripts\robimybalwanki.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UpdateUIScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\PlayerController.cs" Line="24" Column="5" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Assembly-CSharp" expanded="True">
+            <Node name="Models" expanded="True">
+              <Node name="EnvironmentModel.cs" selected="True" />
+            </Node>
+            <Node name="Scripts" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>this.bricks</Value>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
