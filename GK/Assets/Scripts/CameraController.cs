@@ -7,6 +7,7 @@ public class CameraController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		this.transform.Rotate (new Vector3 (90, 0, 0));
 	}
 
 	void Update(){

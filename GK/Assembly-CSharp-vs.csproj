@@ -50,12 +50,14 @@
      <Compile Include="Assets\Models\Brick.cs" />
      <Compile Include="Assets\Models\Constants.cs" />
      <Compile Include="Assets\Models\EnvironmentModel.cs" />
+     <Compile Include="Assets\Models\LevelStopwatch.cs" />
      <Compile Include="Assets\NewBehaviourScript.cs" />
      <Compile Include="Assets\PlayerController.cs" />
-     <Compile Include="Assets\Rotator.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\FPSCubeInsertController.cs" />
      <Compile Include="Assets\Scripts\Initialization.cs" />
+     <Compile Include="Assets\Scripts\PlayerCollider.cs" />
+     <Compile Include="Assets\Scripts\Rotator.cs" />
      <Compile Include="Assets\Scripts\SwitchCamera.cs" />
      <Compile Include="Assets\Scripts\UIUpdate.cs" />
      <Compile Include="Assets\Scripts\robimybalwanki.cs" />
