@@ -54,6 +54,7 @@
      <Compile Include="Assets\NewBehaviourScript.cs" />
      <Compile Include="Assets\PlayerController.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
+     <Compile Include="Assets\Scripts\CursorRayCast.cs" />
      <Compile Include="Assets\Scripts\FPSCubeInsertController.cs" />
      <Compile Include="Assets\Scripts\Initialization.cs" />
      <Compile Include="Assets\Scripts\PlayerCollider.cs" />

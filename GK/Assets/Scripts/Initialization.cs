@@ -27,7 +27,7 @@ public class Initialization : MonoBehaviour {
 			Player.transform.position = new Vector3(0,100,0);
 
 			EnvironmentModel.Instance.RemoveAll();
-			EnvironmentModel.Instance.Generate(EnvironmentModel.Instance.CurrentLevel * 25,
+			EnvironmentModel.Instance.Generate(System.Math.Min(EnvironmentModel.Instance.CurrentLevel * 25, 500),
 			                                   7,10,7);
 		}
 	}
