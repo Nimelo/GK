@@ -5,6 +5,7 @@ using System.Diagnostics;
 using Models;
 public class UIUpdate : MonoBehaviour {
 	public Text StopWatch;
+	public Text CurrentLevel;
 	void Start () {
 		LevelStopwatch.Instance.Start ();
 	}
@@ -12,5 +13,7 @@ public class UIUpdate : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		this.StopWatch.text = LevelStopwatch.Instance.Elapsed.ToString ();
+		this.CurrentLevel.text = EnvironmentModel.Instance.CurrentLevel.ToString ();
+
 	}
 }

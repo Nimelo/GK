@@ -8,7 +8,7 @@ public class EnvironmentModel {
 
 	private List<Brick> bricks;
 	public Vector3 Offset{ get; set;}
-
+	public int CurrentLevel { get; set; }
 	public List<Brick> Bricks {
 		get
 		{
@@ -21,6 +21,7 @@ public class EnvironmentModel {
 		model = new EnvironmentModel ();
 		model.Offset = new Vector3 (0, 0, 0);
 		model.bricks = new List<Brick> ();
+		model.CurrentLevel = 0;
 	}
 
 
@@ -70,10 +71,44 @@ public class EnvironmentModel {
 		return false;
 	}
 
+	public void RemoveAll()
+	{
+		this.bricks.ForEach (x => DestroyGameObjectEvent (x.Object));
+		this.bricks = new List<Brick> ();
+
+	}
+
+	public void Generate(int amountOfBricks, int radiusX, int radiusY, int radiusZ)
+	{
+		System.Random rnd = new System.Random (System.DateTime.Now.Second);
+
+		int bricks = 0;
+		while (bricks < amountOfBricks) {
+			var pos = new Vector3(rnd.Next(2* radiusX) - radiusX, rnd.Next(radiusY), rnd.Next(2* radiusZ) - radiusZ);
+			if(!this.bricks.Exists(x=>x.Position == pos))
+			{
+
+			var obj =  GameObject.CreatePrimitive(PrimitiveType.Cube);
+			obj.GetComponent<Renderer>().material.color = this.getRandColor();
+			obj.transform.position = pos + this.Offset;
+
+				this.AddBrick(obj);
+
+			bricks++;
+			}		
+		}
+
+	}
+
+	 private Color getRandColor(){
+				float r = Random.value;
+				float g = Random.value;
+				float b = Random.value;
+				return new Color(r,g,b);
+			}
 
 	public bool CanInsertAtPosition(Vector3 position){
-	
-		if (this.Bricks.Exists (x => x.Position - this.Offset == position))
+			if (this.Bricks.Exists (x => x.Position - this.Offset == position))
 			return false;
 
 		if (position.y == 0)

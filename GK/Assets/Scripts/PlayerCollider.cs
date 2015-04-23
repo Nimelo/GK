@@ -17,11 +17,14 @@ public class PlayerCollider : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
-		if(other.gameObject.CompareTag("Star"))
+		if(other.gameObject.CompareTag("Finish"))
 		{
-			Destroy(other.gameObject);
-			this.LevelCompletedUI.enabled = true;
+			other.gameObject.transform.position = new Vector3(0,-10,0);
+			//this.LevelCompletedUI.enabled = true;
 			Models.LevelStopwatch.Instance.Stop();
+
+			EnvironmentModel.Instance.CurrentLevel++;
+			Models.LevelStopwatch.Instance.Start();
 		}
 	}
 }

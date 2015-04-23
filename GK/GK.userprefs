@@ -1,27 +1,20 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerCollider.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Initialization.cs">
     <Files>
-      <File FileName="Assets\Models\LevelStopwatch.cs" Line="3" Column="17" />
-      <File FileName="Assets\Scripts\UIUpdate.cs" Line="11" Column="2" />
-      <File FileName="Assets\Scripts\PlayerCollider.cs" Line="9" Column="17" />
-      <File FileName="Assets\Standard Assets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs" Line="18" Column="61" />
+      <File FileName="Assets\Scripts\Initialization.cs" Line="39" Column="73" />
+      <File FileName="Assets\Models\EnvironmentModel.cs" Line="111" Column="2" />
+      <File FileName="Assets\Scripts\UIUpdate.cs" Line="16" Column="1" />
+      <File FileName="Assets\Scripts\FPSCubeInsertController.cs" Line="32" Column="65" />
+      <File FileName="Assets\Scripts\PlayerCollider.cs" Line="23" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="Assembly-CSharp" expanded="True">
+            <Node name="Models" expanded="True" />
             <Node name="Scripts" expanded="True">
-              <Node name="PlayerCollider.cs" selected="True" />
-            </Node>
-          </Node>
-          <Node name="Assembly-CSharp-firstpass" expanded="True">
-            <Node name="Standard Assets" expanded="True">
-              <Node name="Characters" expanded="True">
-                <Node name="FirstPersonCharacter" expanded="True">
-                  <Node name="Scripts" expanded="True" />
-                </Node>
-              </Node>
+              <Node name="Initialization.cs" selected="True" />
             </Node>
           </Node>
         </State>
