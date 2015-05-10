@@ -7,6 +7,8 @@ Project("{7555B4F0-C30F-F860-F6D5-79C79E3FA8E1}") = "GK", "Assembly-CSharp.cspro
 EndProject
 Project("{7555B4F0-C30F-F860-F6D5-79C79E3FA8E1}") = "GK", "Assembly-CSharp-Editor.csproj", "{03DAC0C9-A591-F00D-DE8C-3A0D1FB69858}"
 EndProject
+Project("{7555B4F0-C30F-F860-F6D5-79C79E3FA8E1}") = "GK", "Assembly-UnityScript.unityproj", "{6D5B961D-3677-C4B3-3B07-5B837C8B1D48}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,11 +27,15 @@ Global
 		{03DAC0C9-A591-F00D-DE8C-3A0D1FB69858}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03DAC0C9-A591-F00D-DE8C-3A0D1FB69858}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03DAC0C9-A591-F00D-DE8C-3A0D1FB69858}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D5B961D-3677-C4B3-3B07-5B837C8B1D48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D5B961D-3677-C4B3-3B07-5B837C8B1D48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D5B961D-3677-C4B3-3B07-5B837C8B1D48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D5B961D-3677-C4B3-3B07-5B837C8B1D48}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																																				GlobalSection(MonoDevelopProperties) = preSolution
+																																																														GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

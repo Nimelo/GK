@@ -99,7 +99,7 @@ public class EnvironmentModel {
 		}
 
 	}
-
+	
 	 private Color getRandColor(){
 				float r = Random.value;
 				float g = Random.value;

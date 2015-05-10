@@ -9,11 +9,11 @@ public class Initialization : MonoBehaviour {
 	private int currentLevel = 0;
 	// Use this for initialization
 	void Start () {
-		EnvironmentModel.Instance.Offset = this.transform.position;
+		EnvironmentModel.Instance.Offset = new Vector3 (0, 0.5f, 0);//this.transform.position;
 		EnvironmentModel.Instance.Generate (25, 5, 5, 5);
 		Player.transform.position = new Vector3 (0, 100, 0);
 		Star.transform.position = this.CreateNewStar (5,5,5) + EnvironmentModel.Instance.Offset;
-
+		PickUpGenerator.GenerateHearts(5, 7,1,7);
 	}
 	
 
@@ -29,6 +29,8 @@ public class Initialization : MonoBehaviour {
 			EnvironmentModel.Instance.RemoveAll();
 			EnvironmentModel.Instance.Generate(System.Math.Min(EnvironmentModel.Instance.CurrentLevel * 25, 500),
 			                                   7,10,7);
+			PickUpGenerator.Clear();
+			PickUpGenerator.GenerateHearts(5, 7,1,7);
 		}
 	}
 

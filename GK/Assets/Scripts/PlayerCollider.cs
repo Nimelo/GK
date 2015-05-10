@@ -3,7 +3,6 @@ using System.Collections;
 using UnityEngine.UI;
 public class PlayerCollider : MonoBehaviour {
 	public Canvas LevelCompletedUI;
-	
 	public Text NextLevelIn;
 	// Use this for initialization
 	void Start () {	
@@ -26,5 +25,6 @@ public class PlayerCollider : MonoBehaviour {
 			EnvironmentModel.Instance.CurrentLevel++;
 			Models.LevelStopwatch.Instance.Start();
 		}
-	}
+
+		}
 }
