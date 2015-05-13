@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 
 public class PickUpGenerator : MonoBehaviour {
 
@@ -23,8 +22,9 @@ public class PickUpGenerator : MonoBehaviour {
 			int bricks = 0;
 			while (bricks < amountOfBricks) {
 			var pos = new Vector3(rnd.Next(2* radiusX) - radiusX, rnd.Next(radiusY), rnd.Next(2* radiusZ) - radiusZ);
-
-			Object prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/PickUpHeart.prefab", typeof(GameObject));
+			Object prefab = null;
+				prefab = Resources.Load("PickUpHeart", typeof(GameObject));
+			 
 			GameObject ob = Instantiate(prefab) as GameObject;
 			ob.transform.position = pos + EnvironmentModel.Instance.Offset;
 			bricks++;

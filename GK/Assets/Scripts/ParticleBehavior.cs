@@ -24,7 +24,7 @@ public class ParticleBehavior : MonoBehaviour {
 	{
 		if(other.gameObject.CompareTag("Player"))
 		{
-			Models.LevelStopwatch.Instance.Add( - new TimeSpan(0,0,15));
+			Models.LevelStopwatch.Instance.Add( - new TimeSpan(0,0,20));
 			if(Models.LevelStopwatch.Instance.ElapsedTimeSpan.CompareTo(Constants.MaximumTime) > 0)
 			{
 				Models.LevelStopwatch.Instance.Reset();

@@ -12,6 +12,7 @@ public class Initialization : MonoBehaviour {
 	private int currentLevel = 0;
 	// Use this for initialization
 	void Start () {
+		FloorInitializer.CreateFloor ();
 		EnvironmentModel.Instance.RemoveAll();
 		PickUpGenerator.Clear();
 		EnvironmentModel.Instance.Offset = new Vector3 (0, 0.5f, 0);//this.transform.position;
