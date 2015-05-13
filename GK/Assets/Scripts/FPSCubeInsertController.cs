@@ -7,13 +7,9 @@ using UnityEngine.UI;
 public class FPSCubeInsertController : MonoBehaviour {
 	public Text CreatedBlocks;
 	public Text DestoyedBlocks;
-
-	private int createdBlocks;
-	private int destoyedBlocks;
+	
 	// Use this for initialization
 	void Start () {
-		this.createdBlocks = 0;
-		this.destoyedBlocks = 0;
 	}
 	
 	// Update is called once per frame
@@ -34,8 +30,8 @@ public class FPSCubeInsertController : MonoBehaviour {
 				cube.GetComponent<Renderer>().material.color = this.getRandColor();
 				EnvironmentModel.Instance.AddBrick(cube);
 
-				this.createdBlocks++;
-				this.CreatedBlocks.text = this.createdBlocks.ToString();
+				Constants.CreatedBlocksCounter++;
+				this.CreatedBlocks.text = Constants.CreatedBlocksCounter.ToString();
 			}			 
 		}
 
@@ -48,8 +44,8 @@ public class FPSCubeInsertController : MonoBehaviour {
 
 			if(EnvironmentModel.Instance.RemoveBrick (tmpVector))
 			{
-				this.destoyedBlocks++;
-				this.DestoyedBlocks.text = this.destoyedBlocks.ToString();
+				Constants.DestroyedBlocksCounter++;
+				this.DestoyedBlocks.text = Constants.DestroyedBlocksCounter.ToString();
 			}
 		}			 
 

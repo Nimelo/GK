@@ -17,7 +17,25 @@ namespace Models
 			}
 		}
 
+		TimeSpan _offsetTimeSpan;
 
+		public void Add(TimeSpan ts)
+		{
+			this._offsetTimeSpan = this._offsetTimeSpan.Add (ts);
+		}
+
+		public TimeSpan ElapsedTimeSpan
+		{
+			get
+			{
+				return lvlstopwatch.Elapsed + _offsetTimeSpan;
+			}
+			set
+			{
+				_offsetTimeSpan = value;
+			}
+		}
+		
 	}
 }
 

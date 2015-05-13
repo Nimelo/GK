@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class ParticleBehavior : MonoBehaviour {
 
@@ -23,10 +24,17 @@ public class ParticleBehavior : MonoBehaviour {
 	{
 		if(other.gameObject.CompareTag("Player"))
 		{
+			Models.LevelStopwatch.Instance.Add( - new TimeSpan(0,0,15));
+			if(Models.LevelStopwatch.Instance.ElapsedTimeSpan.CompareTo(Constants.MaximumTime) > 0)
+			{
+				Models.LevelStopwatch.Instance.Reset();
+				Models.LevelStopwatch.Instance.ElapsedTimeSpan = new TimeSpan();
+				Models.LevelStopwatch.Instance.Start();
+			}
 			this.Particle.SetActive(true);
 			this.Particle.GetComponent<ParticleSystem>().enableEmission = true;
 			this.Particle.GetComponent<ParticleSystem>().Emit(100);
-			Object.Destroy(this.gameObject, 1.5f);
+			UnityEngine.Object.Destroy(this.gameObject, 1.5f);
 		}
 	}
 }

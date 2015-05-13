@@ -4,19 +4,17 @@ using System.Collections.Generic;
 using UnityEditor;
 
 public class PickUpGenerator : MonoBehaviour {
-	public   GameObject PickUp;
-	public static GameObject obj;
+
 	// Use this for initialization
 	void Start () {
-		obj = PickUp;
-		PickUpList = new List<GameObject> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
 	}
-	public static IList<GameObject> PickUpList;
+
+	public static IList<GameObject> PickUpList = new List<GameObject> ();
 		
 		public static void GenerateHearts(int amountOfBricks, int radiusX, int radiusY, int radiusZ)
 		{
