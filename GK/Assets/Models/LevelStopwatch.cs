@@ -35,6 +35,8 @@ namespace Models
 				_offsetTimeSpan = value;
 			}
 		}
+
+
 		
 	}
 }

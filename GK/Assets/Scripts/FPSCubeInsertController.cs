@@ -25,10 +25,14 @@ public class FPSCubeInsertController : MonoBehaviour {
 			if(tmpVector != this.transform.position
 			   && EnvironmentModel.Instance.CanInsertAtPosition(tmpVector))
 			{
-				var cube =  GameObject.CreatePrimitive (PrimitiveType.Cube);
-				cube.transform.position = tmpVector + EnvironmentModel.Instance.Offset;
-				cube.GetComponent<Renderer>().material.color = this.getRandColor();
-				EnvironmentModel.Instance.AddBrick(cube);
+				UnityEngine.Object prefab = null;
+				prefab = Resources.Load("BuildingCube", typeof(GameObject));
+				
+				GameObject ob = Instantiate(prefab) as GameObject;
+				//var cube =  GameObject.CreatePrimitive (PrimitiveType.Cube);
+				ob.transform.position = tmpVector + EnvironmentModel.Instance.Offset;
+				//cube.GetComponent<Renderer>().material.color = this.getRandColor();
+				EnvironmentModel.Instance.AddBrick(ob);
 
 				Constants.CreatedBlocksCounter++;
 				this.CreatedBlocks.text = Constants.CreatedBlocksCounter.ToString();
