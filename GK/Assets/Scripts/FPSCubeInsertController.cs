@@ -10,11 +10,13 @@ public class FPSCubeInsertController : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
+		this.DestoyedBlocks.text = Constants.DestroyedBlocksCounter.ToString();
+		this.CreatedBlocks.text = Constants.CreatedBlocksCounter.ToString();
 		if (Input.GetKeyDown (KeyCode.E)) {
 
 			Vector3 tmpVector = this.transform.position + this.transform.forward;
