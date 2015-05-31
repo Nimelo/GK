@@ -10,6 +10,7 @@ public class Initialization : MonoBehaviour {
 	public Canvas LevelUpdateUI;
 	public Text StopWatchText;
 	private int currentLevel = 0;
+	private bool first = true;
 	// Use this for initialization
 	void Start () {
 		FloorInitializer.CreateFloor ();
@@ -27,12 +28,16 @@ public class Initialization : MonoBehaviour {
 		EnvironmentModel.Instance.CurrentLevel = 0;
 		Constants.DestroyedBlocksCounter = 0;
 		Constants.CreatedBlocksCounter = 0;
+		if (this.first) {
+			EnvironmentModel.Instance.DestroyGameObjectEvent += (GameObject obj) => DestroyImmediate (obj);
+			first = false;
+		}
 	}
 	
 
 	// Update is called once per frame
 	void Update () {
-		EnvironmentModel.Instance.DestroyGameObjectEvent += (GameObject obj) => DestroyImmediate(obj);
+
 
 		if (EnvironmentModel.Instance.CurrentLevel != this.currentLevel) {
 			this.currentLevel = EnvironmentModel.Instance.CurrentLevel;
@@ -57,7 +62,7 @@ public class Initialization : MonoBehaviour {
 		{
 			this.StopWatchText.enabled = false;
 			this.LevelUpdateUI.enabled = true;
-			Models.LevelStopwatch.Instance.Reset();
+			Models.LevelStopwatch.Instance.Stop();
 			Models.LevelStopwatch.Instance.ElapsedTimeSpan = new System.TimeSpan();
 		}
 	}

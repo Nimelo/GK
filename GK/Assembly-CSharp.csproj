@@ -46,19 +46,19 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\FloorInitializer.cs" />
      <Compile Include="Assets\Models\Brick.cs" />
      <Compile Include="Assets\Models\Constants.cs" />
      <Compile Include="Assets\Models\EnvironmentModel.cs" />
      <Compile Include="Assets\Models\LevelStopwatch.cs" />
      <Compile Include="Assets\Models\LevelTimer.cs" />
-     <Compile Include="Assets\NewCubeUpdater.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\CursorRayCast.cs" />
      <Compile Include="Assets\Scripts\FPSCubeInsertController.cs" />
+     <Compile Include="Assets\Scripts\FloorInitializer.cs" />
      <Compile Include="Assets\Scripts\Initialization.cs" />
      <Compile Include="Assets\Scripts\Main.cs" />
      <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
+     <Compile Include="Assets\Scripts\NewCubeUpdater.cs" />
      <Compile Include="Assets\Scripts\ParticleBehavior.cs" />
      <Compile Include="Assets\Scripts\PickUpGenerator.cs" />
      <Compile Include="Assets\Scripts\PlayerCollider.cs" />
